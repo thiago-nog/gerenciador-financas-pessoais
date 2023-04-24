@@ -1,5 +1,3 @@
-
---douglas
 CREATE TABLE aplicacoes_renda_fixa (
     id SERIAL PRIMARY KEY,
     valor_aplicado MONEY NOT NULL,
