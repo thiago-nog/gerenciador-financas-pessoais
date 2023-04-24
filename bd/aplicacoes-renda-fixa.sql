@@ -1,8 +1,8 @@
 CREATE TABLE aplicacoes_renda_fixa (
-    id SERIAL,
-    valor_aplicado MONEY,
-    data_aplicacao DATE,
-    valor_atual MONEY,
-    usuario_id INTEGER,
-    primary key (id)
+    id SERIAL PRIMARY KEY,
+    valor_aplicado MONEY NOT NULL,
+    data_aplicacao DATE NOT NULL,
+    valor_atual MONEY NOT NULL,
+    usuario_id INTEGER NOT NULL,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
 );
