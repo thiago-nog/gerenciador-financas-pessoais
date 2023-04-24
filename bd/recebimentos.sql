@@ -7,4 +7,5 @@ CREATE TABLE recebimentos (
     descricao VARCHAR(100) NOT NULL,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE,
     FOREIGN KEY (tipo_recebimento_id) REFERENCES tipos_recebimento(id) ON DELETE CASCADE
+	/*Henrique Gomes*/
 );
