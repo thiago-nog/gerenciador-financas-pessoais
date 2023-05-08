@@ -8,7 +8,11 @@ class Usuario extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    protected $fillable = [ 'id', 'login', 'password' ];
+    protected $fillable = [
+        'id',
+        'login',
+        'password',
+    ];
 
     protected $hidden = [
         'password',
