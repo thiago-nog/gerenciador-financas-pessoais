@@ -1,10 +1,9 @@
 CREATE TABLE tipos_recebimento (
-    id INTEGER PRIMARY KEY,
-    descricao VARCHAR(50) NOT NULL
+    id SERIAL PRIMARY KEY,
+    descricao VARCHAR(50) NOT NULL UNIQUE
 );
 
-INSERT INTO tipos_recebimento
-           (descricao)
-     VALUES
-           ('valor que precisa ser acrescentado')
-GO
+INSERT INTO tipos_recebimento (descricao) VALUES
+('SALÁRIO'),
+('ALUGUEL'),
+('OUTROS');
