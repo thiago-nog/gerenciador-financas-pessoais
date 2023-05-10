@@ -8,3 +8,15 @@ CREATE TABLE despesas (
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
     FOREIGN KEY (tipo_despesa_id) REFERENCES tipos_despesa (id)
 );
+
+CREATE TABLE despesas (
+  id INTEGER NOT NULL UNIQUE,
+  valor MONEY NOT NULL,
+  data_vencimento DATE NOT NULL,
+  tipo_despesa_id INTEGER NOT NULL,
+  descricao VARCHAR(100) NOT NULL,
+  usuario_id INTEGER NOT NULL,
+  
+  PRIMARY KEY (id),
+  FOREIGN KEY (tipo_despesa_id, usuario_id)
+);
