@@ -12,7 +12,11 @@ class TiposDespesaController extends Controller
      */
     public function index()
     {
-        return view('tipos-despesa/index');
+        $tiposDespesa = TipoDespesa::orderBy('descricao', 'asc')->get();
+
+        return view('tipos-despesa/index', [
+            'tiposDespesa' => $tiposDespesa
+        ]);
     }
 
     /**
@@ -32,7 +36,7 @@ class TiposDespesaController extends Controller
         $tipoDespesa->descricao = $request->descricao;
         $tipoDespesa->save();
 
-        return view('tipos-despesa/index');
+        return redirect('tipos-despesa');
     }
 
     /**
