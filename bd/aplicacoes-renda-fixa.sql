@@ -13,4 +13,4 @@ INSERT INTO aplicacoes_renda_fixa(
     valor_atual, 
     usuario_id)
 VALUES 
-    ('1000', '20230101', '2500', '01');
+    ('1000', '20230101', '2500', '1');
