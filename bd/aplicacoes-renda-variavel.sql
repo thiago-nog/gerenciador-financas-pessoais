@@ -1,5 +1,3 @@
---douglas
-
 CREATE TABLE aplicacoes_renda_variavel (
     id SERIAL PRIMARY KEY,
     empresa_id INTEGER NOT NULL,
@@ -7,5 +5,6 @@ CREATE TABLE aplicacoes_renda_variavel (
     quantidade INTEGER NOT NULL,
     valor_unitario MONEY NOT NULL,
     usuario_id INTEGER NOT NULL,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
+    FOREIGN KEY (usuario_id) REFERENCES usuarios (id),
+    FOREIGN KEY (empresa_id) REFERENCES empresas (id)
 );

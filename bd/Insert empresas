@@ -1,0 +1,4 @@
+INSERT INTO empresas (nome, valor_atual) VALUES 
+('Mercearia Boa Vista', '1900.29'),  
+('Lojao Super', '5246.50'),  
+('Papelaria Tia Nina', '4123.56');
