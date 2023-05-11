@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TiposDespesaController;
 
@@ -19,3 +20,4 @@ Route::get('/', function () {
 });
 
 Route::resource('tipos-despesa', TiposDespesaController::class);
+Route::resource('usuarios', UsuarioController::class);
