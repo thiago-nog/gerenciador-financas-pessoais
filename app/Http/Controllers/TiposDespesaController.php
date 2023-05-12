@@ -44,7 +44,10 @@ class TiposDespesaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $tipoDespesa = TipoDespesa::findOrFail($id);
+        return view('tipos-despesa/show', [
+            'tipoDespesa' => $tipoDespesa
+        ]);
     }
 
     /**
@@ -52,7 +55,10 @@ class TiposDespesaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $tipoDespesa = TipoDespesa::findOrFail($id);
+        return view('tipos-despesa/edit', [
+            'tipoDespesa' => $tipoDespesa
+        ]);
     }
 
     /**
@@ -60,7 +66,12 @@ class TiposDespesaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $tipoDespesa = TipoDespesa::findOrFail($id);
+        $tipoDespesa->descricao = $request->descricao;
+        $tipoDespesa->save();
+
+        return redirect('tipos-despesa');
+
     }
 
     /**
@@ -68,6 +79,8 @@ class TiposDespesaController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        TipoDespesa::findOrFail($id)->delete();
+ 
+        return redirect('tipos-despesa');
     }
 }
