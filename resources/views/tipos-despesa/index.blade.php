@@ -11,6 +11,7 @@
             <tr>
                 <th scope="col">Código</th>
                 <th scope="col">Descrição</th>
+                <th scope="col">Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -18,6 +19,11 @@
             <tr>
                 <td>{{ $t->id }}</td>
                 <td>{{ $t->descricao }}</td>
+                <td>
+                    <a class="btn btn-primary" 
+                        href="/tipos-despesa/{{ $t->id }}" 
+                        role="button">Detalhes</a>
+                </td>
             </tr>
             @endforeach
         </tbody>
