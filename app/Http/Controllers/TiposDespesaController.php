@@ -55,7 +55,10 @@ class TiposDespesaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $tipoDespesa = TipoDespesa::findOrFail($id);
+        return view('tipos-despesa/edit', [
+            'tipoDespesa' => $tipoDespesa
+        ]);
     }
 
     /**
@@ -63,7 +66,12 @@ class TiposDespesaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $tipoDespesa = TipoDespesa::findOrFail($id);
+        $tipoDespesa->descricao = $request->descricao;
+        $tipoDespesa->save();
+
+        return redirect('tipos-despesa');
+
     }
 
     /**

@@ -21,8 +21,11 @@
                 <td>{{ $t->descricao }}</td>
                 <td>
                     <a class="btn btn-primary" 
+                        href="/tipos-despesa/{{ $t->id }}/edit" 
+                        role="button">Editar</a>
+                    <a class="btn btn-primary" 
                         href="/tipos-despesa/{{ $t->id }}" 
-                        role="button">Detalhes</a>
+                        role="button">Remover</a>
                 </td>
             </tr>
             @endforeach
