@@ -11,6 +11,7 @@
             <tr>
                 <th scope="col">Código</th>
                 <th scope="col">Descrição</th>
+                <th scope="col">Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -18,6 +19,14 @@
             <tr>
                 <td>{{ $t->id }}</td>
                 <td>{{ $t->descricao }}</td>
+                <td>
+                    <a class="btn btn-primary" 
+                        href="/tipos-despesa/{{ $t->id }}/edit" 
+                        role="button">Editar</a>
+                    <a class="btn btn-primary" 
+                        href="/tipos-despesa/{{ $t->id }}" 
+                        role="button">Remover</a>
+                </td>
             </tr>
             @endforeach
         </tbody>
