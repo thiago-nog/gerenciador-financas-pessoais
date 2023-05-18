@@ -9,7 +9,7 @@
         <input type="text" class="form-control" name="descricao" id="descricao">
     </div>
 
-    <button type="submit" class="btn btn-primary">Salvar</button>
+    <button type="submit" class="btn btn-primary" alt="Salvar" title="Salvar"><span class="material-symbols-outlined">save</span></button>
 </form>
 
 @endsection

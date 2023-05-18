@@ -3,7 +3,7 @@
 @section('content')
 <h1>Tipos de Despesa</h1>
 
-<a class="btn btn-primary" href="/tipos-despesa/create" role="button">Novo</a>
+<a class="btn btn-primary" href="/tipos-despesa/create" role="button" alt="Novo" title="Novo"><span class="material-symbols-outlined">add</span></a>
 
 @if (count($tiposDespesa) > 0)
     <table class="table">
@@ -22,10 +22,10 @@
                 <td>
                     <a class="btn btn-primary" 
                         href="/tipos-despesa/{{ $t->id }}/edit" 
-                        role="button">Editar</a>
+                        role="button" alt="Editar" title="Editar"><span class="material-symbols-outlined">edit</span></a>
                     <a class="btn btn-primary" 
                         href="/tipos-despesa/{{ $t->id }}" 
-                        role="button">Remover</a>
+                        role="button" alt="Remover" title="Remover"><span class="material-symbols-outlined">delete</span></a>
                 </td>
             </tr>
             @endforeach
