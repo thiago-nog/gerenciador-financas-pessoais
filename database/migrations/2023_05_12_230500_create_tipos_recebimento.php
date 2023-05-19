@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tipos_recebimentos', function (Blueprint $table) {
+        Schema::create('tipos_recebimento', function (Blueprint $table) {
             $table->id();
             $table->string('descricao')->unique();
             $table->timestamps();
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tipos_recebimentos');
+        Schema::dropIfExists('tipos_recebimento');
     }
 };
