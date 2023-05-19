@@ -1,29 +1,30 @@
 @extends('templates.main')
 
 @section('content')
-<h1>Tipos de Despesa</h1>
+<h1 class='TitleDespesas'>Tipos de Despesa</h1>
+<div class="ContainerBtnDespesas"><a class="btn btn-primary  BtnTypeDespesa" href="/tipos-despesa/create" role="button">Novo</a></div>
 
-<a class="btn btn-primary" href="/tipos-despesa/create" role="button">Novo</a>
 
 @if (count($tiposDespesa) > 0)
-    <table class="table">
+<div class="ContainerMain">
+<table class="table ContainerTable">
         <thead>
-            <tr>
+            <tr class="Cabecalho">
                 <th scope="col">Código</th>
                 <th scope="col">Descrição</th>
                 <th scope="col">Ações</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="ContainerBody">
             @foreach($tiposDespesa as $t)
             <tr>
                 <td>{{ $t->id }}</td>
                 <td>{{ $t->descricao }}</td>
-                <td>
-                    <a class="btn btn-primary" 
+                <td class="BtnsRemoveEdit">
+                    <a class="btn btn-primary BtnEdit" 
                         href="/tipos-despesa/{{ $t->id }}/edit" 
                         role="button">Editar</a>
-                    <a class="btn btn-primary" 
+                    <a class="btn btn-primary BtnRemove" 
                         href="/tipos-despesa/{{ $t->id }}" 
                         role="button">Remover</a>
                 </td>
@@ -31,6 +32,8 @@
             @endforeach
         </tbody>
     </table>
+</div>
+    
 @endif
 
 @endsection

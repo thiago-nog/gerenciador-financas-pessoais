@@ -1,18 +1,18 @@
 @extends('templates.main')
 
 @section('content')
-<h1>Bem vindo ao Gerenciador de Finanças Pessoais!</h1>
-
-<table class="table">
+<h1 class="TitleHome">Bem vindo ao Gerenciador de Finanças Pessoais!</h1>
+<div class="ContainerMain">
+<table class="table  ContainerTable">
 <thead>
-    <tr>
+    <tr class="Cabecalho">
     <th scope="col">#</th>
     <th scope="col">First</th>
     <th scope="col">Last</th>
     <th scope="col">Handle</th>
     </tr>
 </thead>
-<tbody>
+<tbody class="ContainerBody">
     <tr>
     <th scope="row">1</th>
     <td>Mark</td>
@@ -32,5 +32,7 @@
     </tr>
 </tbody>
 </table>
+</div>
+
 
 @endsection
