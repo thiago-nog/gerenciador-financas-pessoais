@@ -36,11 +36,11 @@ class UsuarioController extends Controller
         ];
 
         if (!$credentials) {
-            return redirect()->route('usuarios/index')->with('message', 'Credenciais Inválidas!');
+            return redirect('usuarios')->with('message', 'Credenciais Inválidas!');
         }
 
         $this->usuarioRepository->store($credentials);
-        return redirect()->route('usuarios/index')->with('message', 'Usuario criado com sucesso!');
+        return redirect('usuarios')->with('message', 'Usuario criado com sucesso!');
     }
 
     public function show(string $id): View
