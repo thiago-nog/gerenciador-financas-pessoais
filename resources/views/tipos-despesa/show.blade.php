@@ -13,7 +13,7 @@
         Descrição: {{ $tipoDespesa->descricao }}
     </div>
 
-    <button type="submit" class="btn btn-primary">Remover</button>
+    <button type="submit" class="btn btn-primary" alt="Remover" title="Remover"><span class="material-symbols-outlined">delete</span></button>
 </form>
 
 @endsection
