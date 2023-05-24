@@ -1,6 +1,7 @@
 @extends('templates.main')
 
 @section('content')
+
 <h1 class="TitleDespesas">Cadastro de Tipo de Despesa</h1>
 <div class="ContainerMainDepesas">
     <form method="POST" action="/tipos-despesa">
@@ -13,6 +14,7 @@
         <button type="submit" class="btn btn-primary BtnCreateDespesas">Salvar</button>
     </form>
 </div>
+
 
 
 @endsection
