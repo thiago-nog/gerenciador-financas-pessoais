@@ -1,0 +1,79 @@
+.ContainerMain
+{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.ContainerTable{
+  border: solid 1px rgb(205, 203, 203);
+}
+.Cabecalho th{
+  color: white;
+  background-color: rgb(118, 118, 239);
+}
+.ContainerBody td{
+  border: solid 1px rgb(205, 203, 203);
+}
+.TitleHome{
+  text-align: center;
+  color: rgb(93, 91, 91);
+  margin: 2% 15%;
+}
+
+ /* Tela Tipo de Despesas */ 
+
+ .TitleDespesas{
+  text-align: center;
+  margin: 2% 15%;
+  color: rgb(93, 91, 91);
+ }
+ .BtnTypeDespesa{
+  padding: 0.3% 3%;
+  width: 15%;
+ }
+ .ContainerBtnDespesas{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2%;
+ }
+
+ /* Tela create de Despesas */ 
+
+ .ContainerMainDepesas{
+  margin-left: 15%;
+  margin-right: 15%;
+ }
+ .BtnCreateDespesas{
+  padding: 0.5% 3%;
+  width: 15%;
+  
+ }
+ .BtnsRemoveEdit{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+ }
+ .BtnEdit{
+  width: 15%;
+  margin-right: 1%;
+ }
+.BtnRemove{
+  width: 15%;
+  
+}
+
+
+.DescNegrito{
+  font-weight: bold;
+  color: rgb(94, 93, 93);
+  font-size: 2rem;
+}
+.FormularioDelete{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.btnTelaRemove{
+  width: 50%;
+}

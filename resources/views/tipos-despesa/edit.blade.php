@@ -1,7 +1,8 @@
 @extends('templates.main')
 
 @section('content')
-<h1>Detalhes do Tipo de Despesa</h1>
+<h1 class="TitleDespesas">Detalhes do Tipo de Despesa</h1>
+<div class="ContainerMainDepesas">
 <form method="POST" action="/tipos-despesa/{{ $tipoDespesa->id }}">
     {{ csrf_field() }}
 
@@ -18,7 +19,11 @@
             value="{{ $tipoDespesa->descricao }}">
     </div>
 
-    <button type="submit" class="btn btn-primary" alt="Salvar" title="Salvar"><span class="material-symbols-outlined">save</span></button>
+
+    <button type="submit" class="btn btn-primary BtnCreateDespesas">Salvar</button>
+
 </form>
+</div>
+
 
 @endsection
